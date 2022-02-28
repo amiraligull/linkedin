@@ -4,11 +4,21 @@ import { Avatar } from "@mui/material";
 import React from "react";
 import "./sidebar.css";
 const Sidebar = () => {
+  // side bar hash tag headings
+  const recentItem = (topic) => {
+    return (
+      <div className="recentItems">
+        <div className="hastag">#</div>
+        <p>{topic}</p>
+      </div>
+    );
+  };
+  // # tag side bar ending here
   return (
     <div className="sidebar">
       <div className="sidebartop">
         <img
-          src="https://media-exp1.licdn.com/dms/image/C4D1BAQHrfgSFLECyWg/company-background_10000/0/1631775606203?e=1645718400&v=beta&t=F7sJjChm6hVBc6HUQDL7K5_slGfoEOShaSqz38gpPgQ"
+          src="https://media-exp1.licdn.com/dms/image/C4D1BAQHrfgSFLECyWg/company-background_10000/0/1631775606203?e=1646125200&v=beta&t=slezfdEU09fEusGaewE3ccRLKKXIchTEFH5AlSKAeXE"
           alt=""
         />
         <Avatar className="sidebarAvatar" />
@@ -28,6 +38,11 @@ const Sidebar = () => {
       </div>
       <div className="sidebarBottom">
         <p>Recently</p>
+        {recentItem("React Js")}
+        {recentItem("React Native")}
+        {recentItem("Laravel")}
+        {recentItem("Programing")}
+        {recentItem("Music")}
       </div>
     </div>
   );
